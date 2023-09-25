@@ -6,8 +6,6 @@
 trigger:
   - main
 
-pool: 
-
 variables: 
     - template : variable.yml
 stages:
