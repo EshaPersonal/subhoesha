@@ -12,6 +12,6 @@ stages:
   - stage:
     jobs:
        - job:
-         pool: "ubuntu-latest"
+         pool: "Azure Pipelines"
          steps:
             - script: echo "my favourite vegetable is ${{variables.favouriteveggies}}"
