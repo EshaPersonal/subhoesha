@@ -4,19 +4,16 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+  - main
+
+pool: 
+
 variables: 
-- template : variable.yml
+    - template : variable.yml
 stages:
-- jobs:
-  pool:
-  vmImage: ubuntu-latest
-
-steps:
-- script: echo my favourite vegetable is ${{variables.favouriteveggies}}
-#  displayName: 'Run a one-line script'
-
-#- script: |
-#    echo Add other tasks to build, test, and deploy your project.
-#    echo See https://aka.ms/yaml
-#  displayName: 'Run a multi-line script'
+  - stage:
+    jobs:
+       - job:
+         pool: "ubuntu-latest"
+         steps:
+            - script: echo "my favourite vegetable is ${{variables.favouriteveggies}}"
