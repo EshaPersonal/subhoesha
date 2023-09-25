@@ -13,7 +13,7 @@ stages:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo my favourite vegetable is ${{variables.favouriteveggie}}
+- script: echo my favourite vegetable is ${{variables.favouriteveggies}}
 #  displayName: 'Run a one-line script'
 
 #- script: |
