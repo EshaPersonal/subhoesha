@@ -8,7 +8,7 @@
         "networkInterfaces_myVMNic_name": {
             "value": null
         },
-        "virtualMachines_myfirstvmarm_name": {
+        "virtualMachines_myfirstvmarm1_name": {
             "value": null
         },
         "publicIPAddresses_myPublicIP_name": {
