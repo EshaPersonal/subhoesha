@@ -25,5 +25,5 @@ stages:
             csmFileLink: 'https://github.com/EshaPersonal/subhoesha/blob/main/template.json'
             csmParametersFileLink: 'https://github.com/EshaPersonal/subhoesha/blob/main/parameters.json'
             deploymentMode: 'Complete'
-            deploymentName: 'vm deployment'
+            deploymentName: 'vm_deployment'
             
