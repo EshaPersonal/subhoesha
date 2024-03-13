@@ -6,12 +6,24 @@
 trigger:
   - main
 
-variables: 
-    - template : variable.yml
+
 stages:
   - stage:
     jobs:
        - job:
          pool: "Azure Pipelines"
          steps:
-            - script: echo "my favourite vegetable is ${{variables.favouriteveggies}}"
+         - task: AzureResourceManagerTemplateDeployment@3
+           inputs:
+            deploymentScope: 'Resource Group'
+            azureResourceManagerConnection: 'spn1'
+            subscriptionId: '003b772f-91e8-40ec-9470-b63ff9aac613'
+            action: 'Create Or Update Resource Group'
+            resourceGroupName: 'terraform_RG'
+            location: 'East US'
+            templateLocation: 'URL of the file'
+            csmFileLink: 'https://github.com/EshaPersonal/subhoesha/blob/main/template.json'
+            csmParametersFileLink: 'https://github.com/EshaPersonal/subhoesha/blob/main/parameters.json'
+            deploymentMode: 'Complete'
+            deploymentName: 'vm deployment'
+            
